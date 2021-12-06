@@ -1,5 +1,34 @@
 //this file will be used for backend server
-import('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
+
+
+//////////////////// SERVER AUTH CODE ///////////////////////
+
+// Require client library and private key.
+import ee from '@google/earthengine';
+const privateKey = process.env.API_KEY;
+
+// Initialize client library and run analysis.
+var runAnalysis = function () {
+    ee.initialize(null, null, function () {
+        // ... run analysis ...
+    }, function (e) {
+        console.error('Initialization error: ' + e);
+    });
+};
+``
+// Authenticate using a service account.
+ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
+    console.error('Authentication error: ' + e);
+});
+
+////////////////////////////////////////////////////////
+
+
+
+
+
 
 ///////// copied from AAO Server Setup ////////////
 
@@ -62,25 +91,3 @@ app.get('/api', (request, response) => {
 //////////////////////////////////////////////////////
 
 
-
-//////////////////// SERVER AUTH CODE ///////////////////////
-
-// Require client library and private key.
-import ee from '@google/earthengine';
-import privateKey from 'process.env.API_KEY';
-
-// Initialize client library and run analysis.
-var runAnalysis = function () {
-    ee.initialize(null, null, function () {
-        // ... run analysis ...
-    }, function (e) {
-        console.error('Initialization error: ' + e);
-    });
-};
-``
-// Authenticate using a service account.
-ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
-    console.error('Authentication error: ' + e);
-});
-
-////////////////////////////////////////////////////////
