@@ -5,9 +5,11 @@ dotenv.config();
 
 //////////////////// SERVER AUTH CODE ///////////////////////
 
+
 // Require client library and private key.
 import ee from '@google/earthengine';
-const privateKey = process.env.API_KEY;
+export const privateKey = process.env.API_KEY;
+
 
 // Initialize client library and run analysis.
 var runAnalysis = function () {
@@ -18,6 +20,7 @@ var runAnalysis = function () {
     });
 };
 ``
+
 // Authenticate using a service account.
 ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
     console.error('Authentication error: ' + e);
@@ -29,12 +32,12 @@ ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
 
 
 
-
 ///////// copied from AAO Server Setup ////////////
 
 import express from 'express'; // web framework
 import fetch from 'node-fetch'; // for making AJAX requests
 import path from 'path';
+import { chownSync } from 'fs';
 
 // put environmental variables defined in .env file on process.env
 // console.log(process.env.API_KEY === "banana");
@@ -47,15 +50,16 @@ app.use(express.static('dist'));
 
 // in response to `GET /` requests, send the file `dist/index.html`
 app.get('/', (request, response) => {
+    // console.log("I'm in route");
     response.sendFile(`${__dirname}/dist/index.html`);
 });
 
-// Heroku sets process.env.PORT in production; use 8000 in dev
-const PORT = process.env.PORT || 8000;
-// start up a server listening at PORT; on success, log a message
-app.listen(PORT, () => {
-    console.log(`Listening at localhost:${PORT}`);
-});
+// // Heroku sets process.env.PORT in production; use 8000 in dev
+// const PORT = process.env.PORT || 8000;
+// // start up a server listening at PORT; on success, log a message
+// app.listen(PORT, () => {
+//     console.log(`Listening at localhost:${PORT}`);
+// });
 
 /////////////////////////////////////////////////////
 
@@ -64,14 +68,14 @@ app.listen(PORT, () => {
 // `GET /cors` requests trigger this callback (like controller action)
 // `request` object contains request's query string, wildcard params, etc
 // `response` object has `send` method for sending our server response
-app.get('/cors', (request, response) => {
-    console.log(`Fetching: ${request.query.url}`);
+// app.get('/cors', (request, response) => {
+//     console.log(`Fetching: ${request.query.url}`);
 
-    fetch(request.query.url) // AJAX request to URL provided in query string
-        .then(apiResponse => apiResponse.json()) // parse response as JSON
-        .then(data => response.send(data)) // send parsed data to frontend
-        .catch(error => response.send(error));
-});
+//     fetch(request.query.url) // AJAX request to URL provided in query string
+//         .then(apiResponse => apiResponse.json()) // parse response as JSON
+//         .then(data => response.send(data)) // send parsed data to frontend
+//         .catch(error => response.send(error));
+// });
 
 
 app.get('/api', (request, response) => {
@@ -88,6 +92,36 @@ app.get('/api', (request, response) => {
         .catch(error => response.send(error));
 });
 
+// app.get('/authenticate', (request, response) => {
+//     // console.log('authenticating...')
+//     // import ee from '@google/earthengine';
+//     // export const privateKey = process.env.API_KEY;
+
+
+//     // // Initialize client library and run analysis.
+//     // var runAnalysis = function () {
+//     //     ee.initialize(null, null, function () {
+//     //         // ... run analysis ...
+//     //     }, function (e) {
+//     //         console.error('Initialization error: ' + e);
+//     //     });
+//     // };
+
+//     // // Authenticate using a service account.
+//     // ee.data.authenticateViaPrivateKey(privateKey, runAnalysis, function (e) {
+//     //     console.error('Authentication error: ' + e);
+//     // });
+//     response.send('hi');
+// })
+
+
+
 //////////////////////////////////////////////////////
 
 
+// Heroku sets process.env.PORT in production; use 8000 in dev
+const PORT = process.env.PORT || 8000;
+// start up a server listening at PORT; on success, log a message
+app.listen(PORT, () => {
+    console.log(`Listening at localhost:${PORT}`);
+});

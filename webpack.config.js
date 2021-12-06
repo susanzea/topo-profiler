@@ -33,6 +33,7 @@ const config = {
             }
         ],
     },
+    // target: 'node',
     plugins: [new MiniCssExtractPlugin()],
 };
 
