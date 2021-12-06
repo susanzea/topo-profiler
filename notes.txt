@@ -1,0 +1,17 @@
+********************PACKAGE.JSON *******************
+"start": "node app.js",     // runs server
+"start:debug": "node --inspect app.js",     // server with debuggers 
+
+
+
+
+
+****************** QUESTIONS *********************
+```` what does this all mean? ```
+Then, after setting up these routes, you'll have to change every frontend AJAX request to your API so that it goes through your server instead. 
+The requests you're making on the frontend now, will instead be made on your server (app.js). Every aspect of the request, then, either needs to:
+
+be hardcoded on your server – such as parts of the url that never change, or
+
+be sent from the frontend to the backend, in the form of a query string param, wildcard, or in the request body.
+```````

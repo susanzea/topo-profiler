@@ -1,5 +1,8 @@
-const path = require('path');
-const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+import path from 'path';
+import MiniCssExtractPlugin from 'mini-css-extract-plugin';
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const config = {
     entry: [
@@ -33,7 +36,7 @@ const config = {
     plugins: [new MiniCssExtractPlugin()],
 };
 
-module.exports = (env, argv) => {
+const exportFunc = (env, argv) => {
     if (argv.mode === 'production') {
         config.devtool = 'source-map';
     } else {
@@ -42,3 +45,5 @@ module.exports = (env, argv) => {
 
     return config;
 }
+
+export default exportFunc;
