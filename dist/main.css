@@ -13,6 +13,7 @@ body, html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-position: 100% 0%;
   font-family: 'Noto Sans', sans-serif;
 }
 
@@ -37,6 +38,9 @@ body, html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%
 }
 
 #site-title {
@@ -49,10 +53,10 @@ body, html {
 
 #mtn-logo {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(108%) contrast(102%);
-  height: 3.5em;
-  width: 3.5em;
+  height: 3em;
+  width: 3em;
   display: block;
-  margin: 0.5em 0.5em 0.5em 0.5em;
+  margin: 0.8em 0.5em 0.5em 0.5em;
 }
 
 #mtn-logo:hover {
@@ -70,24 +74,30 @@ body, html {
   filter: invert(90%) sepia(8%) saturate(1436%) hue-rotate(342deg) brightness(106%) contrast(102%);
 }
 
-#custom-loc-input{
-  color: #B8B8B8;
-  width: 60%;
-}
-
 .topo-intro {
   /* background-color: #EDEDED; */
   background-color: #FAFAFA;
   color: #5C5C5C;
   width: 20%;
+  padding: 2em;
+  border: white ridge 0.5em;
 }
+
+#custom-loc-input{
+  color: #B8B8B8;
+  width: 60%;
+}
+
 
 .location-input {
   /* background-color: #EDEDED; */
   background-color: #FAFAFA;
   color: #5C5C5C;
   width: 50%;
+  padding: 2em;
+  border: white ridge 0.5em;
 }
+
 
 .homepage-buttons {
   background: #3D3D3D;
@@ -104,6 +114,21 @@ body, html {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(108%) contrast(102%);
   width: 1.5em;
   height: auto;
+}
+
+#location-input-title {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+#location-input-sub-title {
+  font-size: 1.25em;
+  margin-top: 0.25em;
+}
+
+#topo-intro-title {
+  margin: 0;
+  font-size: 2.5em;
 }
 
 .preset-loc-buttons > button {
