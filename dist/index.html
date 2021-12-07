@@ -16,10 +16,11 @@
 </head>
 
 <body>
+    <div class='website-header'>
+        <h1 id='site-title'>Topo Profiler</h1>
+    </div>
 <!------------------------------ HOMEPAGE ------------------------------------->
     <div class='homepage'>
-        <h1 id='site-title'>Topo Profiler</h1>
-        
         <nav class='nav-links'>
             <a href="">Github</a>
             <a href="">LinkedIn</a>
@@ -28,7 +29,7 @@
         </nav>
         
         <aside class='topo-intro'>
-            <h3>Context</h3>
+            <h3 id='topo-intro-header'>Context</h3>
             <p>topographic def</p>
             <p>topographic map explanation</p>
             <p>topographic profile explanation</p>
@@ -38,15 +39,15 @@
         
         <!-- select location -->
         <section class='location-input'>
-            <h2>Where to?</h2>
-            <h3>Click on a location below or enter your own!</h3>
+            <h2 id='location-input-title'>Where to?</h2>
+            <h3 id='location-input-sub-title'>Click on a location below or enter your own!</h3>
             <section class='preset-loc-buttons'>
                 <button id="catalina-button">catalina</button>
                 <button id="yosemite-button">yosemite</button>
                 <button id="mojaves-button">mojaves</button>
             </section>
             <form class='custom-loc-form' action="">
-                <input type="text" value="or enter custom location...">
+                <input id="custom-loc-input" type="text" value="or enter custom location...">
                 <button class="homepage-buttons">create map</button>
             </form>
         </section>
