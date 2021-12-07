@@ -9,7 +9,6 @@
   "engines": {
     "node": "17.1.0"
   },
-    "type": "module",
   "scripts": {
     "start": "node app.js",
     "start:debug": "node --inspect app.js",

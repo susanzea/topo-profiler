@@ -8,6 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./main.css" />
     <script src="./main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+
     <title>Topo Profiler</title>
 </head>
 
@@ -29,24 +33,21 @@
             <p>topographic map explanation</p>
             <p>topographic profile explanation</p>
             <p>topographic profile explanation</p>
-            <button>Click for More Info</button>
+            <button class="homepage-buttons">Click for More Info</button>
         </aside>
         
         <!-- select location -->
         <section class='location-input'>
             <h2>Where to?</h2>
             <h3>Click on a location below or enter your own!</h3>
-            <!-- <img id="catalina" src="" alt="">
-                <img id="yosemite" src="" alt="">
-                <img id="mojaves" src="" alt=""> -->
             <section class='preset-loc-buttons'>
-                <button>catalina</button>
-                <button>yosemite</button>
-                <button>mojaves</button>
+                <button id="catalina-button">catalina</button>
+                <button id="yosemite-button">yosemite</button>
+                <button id="mojaves-button">mojaves</button>
             </section>
             <form class='custom-loc-form' action="">
-                <input type="text">
-                <button>create map</button>
+                <input type="text" value="or enter custom location...">
+                <button class="homepage-buttons">create map</button>
             </form>
         </section>
     </div>

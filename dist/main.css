@@ -2,17 +2,62 @@
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
 
-.homepage {
-  visibility: visible;
-  background-image: ;
+
+
+ html { 
+  background: url(../assets/topo-lines.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 
+
+/********* HOMEPAGE ***********/
+
+.homepage {
+  visibility: visible; 
+}
+
+#site-title {
+  background-color: #757575;
+  color: white;
+}
+
+.topo-intro {
+  background-color: #EDEDED;
+  color: #424242;
+}
+
+.location-input {
+  background-color: #EDEDED;
+  color: #424242;
+}
+
+.homepage-buttons {
+  background-color: white;
+  border-radius: 25px;
+}
+
+.preset-loc-buttons > button {
+  background-color: lightblue;
+}
+
+/************ EDU PAGE ***********/
 .edu-page {
   visibility: hidden;
 }
 
 
+
+
+
+
+
+/************* MAP & PROFILE PAGE **********/
 .map-page {
   visibility: hidden;
 }
+
