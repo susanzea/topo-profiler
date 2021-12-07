@@ -19,15 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // image.getMap({ min: 0, max: 1000 }, function (map) {
     //     console.log(map);
     // });
-    // const catalinaButton = body.getElementById("catalina-button")("click", () => {
-    //     console.log("catalina clicked")
-    // }
+    
+    const catalinaButton = document.getElementById("catalina-button")
 
-    // )
+    catalinaButton.addEventListener("click", () => {
+        console.log("catalina clicked")
+
+        //change homepage to hidden
+        const homepageDiv = document.getElementsByClassName("homepage")
+        homepageDiv.getAttribute("class")
+        // homepageDiv.setAttribute('visibility', 'hidden');
+        //change map page to visible
+
+    })
+    
     
 })
-
-
 
 
 

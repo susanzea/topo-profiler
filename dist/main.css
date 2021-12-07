@@ -85,7 +85,7 @@ body, html {
 
 #custom-loc-input{
   color: #B8B8B8;
-  width: 60%;
+  width: 40%;
 }
 
 
@@ -96,6 +96,7 @@ body, html {
   width: 50%;
   padding: 2em;
   border: white ridge 0.5em;
+  text-align: center;
 }
 
 
@@ -104,6 +105,7 @@ body, html {
   border: none;
   border-radius: 2em;
   color: white;
+  height: 2em;
 }
 
 .homepage-buttons:hover {
@@ -129,10 +131,13 @@ body, html {
 #topo-intro-title {
   margin: 0;
   font-size: 2.5em;
+  text-align: center;
 }
 
 .preset-loc-buttons > button {
   background-color: lightblue;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
 /************ EDU PAGE ***********/
