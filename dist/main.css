@@ -21,24 +21,52 @@
   visibility: visible; 
 }
 
+.website-header {
+  background-color: #949494;
+}
+
 #site-title {
-  background-color: #757575;
   color: white;
+  font-size: 3.5em;
+  font-weight: 700;
+}
+
+#mtn-logo {
+  height: 3.5em;
+  width: 3.5em;
+}
+
+.nav-links > a > img {
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(108%) contrast(102%);
+  height: 2em;
+  width: 2em;
 }
 
 .topo-intro {
-  background-color: #EDEDED;
-  color: #424242;
+  /* background-color: #EDEDED; */
+  background-color: white;
+  color: #5C5C5C;
 }
 
 .location-input {
-  background-color: #EDEDED;
-  color: #424242;
+  /* background-color: #EDEDED; */
+  background-color: white;
+  color: #5C5C5C;
+}
+
+#search {
+  background: none;
+  border: none;
+}
+
+#search > img {
+  width: 1.5em;
+  height: auto;
 }
 
 .homepage-buttons {
   background-color: white;
-  border-radius: 25px;
+  border-radius: 2em;
 }
 
 .preset-loc-buttons > button {

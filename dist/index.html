@@ -10,24 +10,25 @@
     <script src="./main.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
 
     <title>Topo Profiler</title>
 </head>
 
 <body>
     <div class='website-header'>
+        <a href=""><img id="mtn-logo" src="../assets/site-header/mtn-logo.svg" alt=""></a>
         <h1 id='site-title'>Topo Profiler</h1>
+        <nav class='nav-links'>
+            <a href=""><img src="../assets/site-header/github.svg" alt=""></a>
+            <a href=""><img src="../assets/site-header/linkedin.svg" alt=""></i></a>
+            <a href=""><img src="../assets/site-header/angellist.svg" alt=""></a>
+            <a href=""><img src="../assets/site-header/source.svg" alt=""></a>
+            <a href=""><img src="../assets/site-header/contact.svg" alt=""></a>
+        </nav>
     </div>
 <!------------------------------ HOMEPAGE ------------------------------------->
     <div class='homepage'>
-        <nav class='nav-links'>
-            <a href="">Github</a>
-            <a href="">LinkedIn</a>
-            <a href="">Angel List</a>
-            <a href="">Source Code</a>
-        </nav>
-        
         <aside class='topo-intro'>
             <h3 id='topo-intro-header'>Context</h3>
             <p>topographic def</p>
@@ -48,7 +49,7 @@
             </section>
             <form class='custom-loc-form' action="">
                 <input id="custom-loc-input" type="text" value="or enter custom location...">
-                <button class="homepage-buttons">create map</button>
+                <button id="search" class="homepage-buttons"><img src="../assets/search-custom-loc-button.svg" alt=""></button>
             </form>
         </section>
     </div>
