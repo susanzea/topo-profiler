@@ -25,12 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
     catalinaButton.addEventListener("click", () => {
         console.log("catalina clicked")
 
-        //change homepage to hidden
-        const homepageDiv = document.getElementsByClassName("homepage")
-        homepageDiv.getAttribute("class")
-        // homepageDiv.setAttribute('visibility', 'hidden');
-        //change map page to visible
+        //hide homepage code
+        const homepageDiv = document.getElementsByClassName("homepage")[0]
+        console.log(homepageDiv)
+        homepageDiv.style.visibility = "hidden"
+        homepageDiv.style.height = "0px"
 
+        //show map page code
+        const mapPageDiv = document.getElementsByClassName("map-page")[0]
+        console.log(mapPageDiv)
+        mapPageDiv.style.visibility = "visible"
+        homepageDiv.style.height = "100vh"
     })
     
     
