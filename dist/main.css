@@ -57,6 +57,10 @@ html {
   filter: invert(96%) sepia(9%) saturate(1031%) hue-rotate(74deg) brightness(102%) contrast(105%);
 }
 
+.nav-links {
+  margin-right: 1.2em;
+}
+
 .nav-links > a > img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(108%) contrast(102%);
   height: 2em;
@@ -246,7 +250,8 @@ html {
   align-items: center;
   justify-content: space-evenly;
   width: 15%;
-  /* margin-left: 5%; */
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .map-page > div {
