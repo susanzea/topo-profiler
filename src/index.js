@@ -21,23 +21,71 @@ document.addEventListener("DOMContentLoaded", () => {
     // });
     
     const catalinaButton = document.getElementById("catalina-button")
-
     catalinaButton.addEventListener("click", () => {
         console.log("catalina clicked")
 
         //hide homepage code
         const homepageDiv = document.getElementsByClassName("homepage")[0]
         console.log(homepageDiv)
-        homepageDiv.style.visibility = "hidden"
-        homepageDiv.style.height = "0px"
+        homepageDiv.style.display = "none"
 
         //show map page code
         const mapPageDiv = document.getElementsByClassName("map-page")[0]
         console.log(mapPageDiv)
-        mapPageDiv.style.visibility = "visible"
-        homepageDiv.style.height = "100vh"
+        mapPageDiv.style.display = "flex"
+    })
+
+    const yosemiteButton = document.getElementById("yosemite-button")
+    yosemiteButton.addEventListener("click", () => {
+        console.log("yosemite clicked")
+
+        //hide homepage code
+        const homepageDiv = document.getElementsByClassName("homepage")[0]
+        console.log(homepageDiv)
+        homepageDiv.style.display = "none"
+
+        //show map page code
+        const mapPageDiv = document.getElementsByClassName("map-page")[0]
+        console.log(mapPageDiv)
+        mapPageDiv.style.display = "flex"
     })
     
+    const mojavesButton = document.getElementById("mojaves-button")
+    mojavesButton.addEventListener("click", () => {
+        console.log("mojaves clicked")
+
+        //hide homepage code
+        const homepageDiv = document.getElementsByClassName("homepage")[0]
+        console.log(homepageDiv)
+        homepageDiv.style.display = "none"
+
+        //show map page code
+        const mapPageDiv = document.getElementsByClassName("map-page")[0]
+        console.log(mapPageDiv)
+        mapPageDiv.style.display = "flex"
+    })
+
+    const infoButton = document.getElementById("info-button")
+    infoButton.addEventListener("click", () => {
+        console.log("info clicked")
+
+        //hide homepage code
+        const homepageDiv = document.getElementsByClassName("homepage")[0]
+        console.log(homepageDiv)
+        homepageDiv.style.display = "none"
+
+        //show map page code
+        const topoIntroPageDiv = document.getElementsByClassName("edu-page")[0]
+        console.log(topoIntroPageDiv)
+        topoIntroPageDiv.style.display = "flex"
+    })
+
+    // const locInput = document.getElementById("custom-loc-input")
+    // infoButton.addEventListener("click", () => {
+    //     console.log("custom loc input box clicked")
+
+    //     topoIntroPageDiv.style.value = ""
+    // })
     
 })
 

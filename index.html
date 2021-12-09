@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <script src="./dist/main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Topo Profiler</title>
+</head>
+
+<body>
+    <div class='website-header'>
+        <a href=""><img id="mtn-logo" src="../assets/site-header/mtn-logo.svg" alt=""></a>
+        <h1 id='site-title'>Topo Profiler</h1>
+        <nav class='nav-links'>
+            <a href="https://github.com/susanzea"><img src="../assets/site-header/github.svg" alt=""></a>
+            <a href=""><img src="../assets/site-header/linkedin.svg" alt=""></i></a>
+            <a href=""><img src="../assets/site-header/angellist.svg" alt=""></a>
+            <a href=""><img src="../assets/site-header/source.svg" alt=""></a>
+            <a href=""><img src="../assets/site-header/contact.svg" alt=""></a>
+        </nav>
+    </div>
+<!------------------------------ HOMEPAGE ------------------------------------->
+    <div class='homepage'>
+        <aside class='topo-intro'>
+            <h3 id='topo-intro-title'>Welcome</h3>
+            <p>
+                Select or enter a location to the right to render a 
+                topographic map of your chosen region. You will then have the option 
+                to draw a path on the map and render it's profile.
+            </p>
+            <p>Click below for a more in-depth look at the basics of topography.</p>
+            <button id="info-button" class="homepage-buttons">More Info</button>
+        </aside>
+        
+        <!-- select location -->
+        <section class='location-input'>
+            <h2 id='location-input-title'>Where to?</h2>
+            <h3 id='location-input-sub-title'>Click on a location below or enter your own!</h3>
+            <section class='preset-loc-buttons'>
+                <button id="catalina-button"></button>
+                <button id="yosemite-button"></button>
+                <button id="mojaves-button"></button>
+            </section>
+            <form class='custom-loc-form' action="">
+                <input id="custom-loc-input" type="text" name="inputBox" value="" placeholder="  or enter a custom location...">
+                <button id="search-button" class="homepage-buttons"><img src="../assets/search-custom-loc-button.svg" alt=""></button>
+            </form>
+        </section>
+    </div>
+        
+
+
+
+
+
+
+<!------------------------ IN-DEPTH TOPO INFO --------------------------------->
+        <!-- remove breaks after splitting html into mult files -->
+ 
+
+    <div class='edu-page'>
+
+        <section id="topo-def">
+            <section id="writing">
+                <h2 id="topo-def-title">What is Topography?</h2>
+                <p id="topo-def-text">
+                    Topography is a representation of the geographic features of an area. 
+                    This is accomplished by collecting discrete points of elevation and 
+                    then connecting points of equal elevation to form a topographic map. The lines that connect these 
+                    points are called contour lines and a key feature of theirs is that they 
+                    never intersect.
+                </p>
+            </section>
+            <img id= "ele-data" src="../assets/edu-page/points-and-lines.png" alt="">
+        </section>
+        <br><br>
+
+        <section id="profile-deriv">
+            <section id="writing">
+                <h2 id="prof-deriv-title">Profile Derivation</h2>
+                <p>
+                    A topographic profile is a chart that represents the change in elevation
+                    along a crossection on a topographic map. In other words, a profile shows 
+                    what that infinitesimal thin slice of terrain would look like from the side, 
+                    instead of from above like a topographic map. Due to elevation data inherently 
+                    consisting of discrete points, the gaps between lines must be interpolated.
+                </p>
+            </section>
+            <img src="../assets/edu-page/profile.png" alt="image of a topographic map and its corresponding profile">
+        </section>
+
+        
+    </div>
+
+
+
+
+
+
+
+
+<!-------------------------- MAP & PROFILE PAGE ------------------------------->
+
+
+    <div class='map-page'>
+        
+        <div class="map-page-titles">
+            <h2 id="map-title">map</h2>
+            <h2 id="profile-title">profile</h2>
+        </div>
+
+        <div class="data">
+            <img id="topo-map" src="../assets/topo-maps/catalina.png" alt="">
+            <img id="profile" src="../assets/topo-maps/profile.gif" alt="">
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>
