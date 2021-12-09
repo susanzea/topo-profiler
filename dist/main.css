@@ -57,11 +57,6 @@ html {
   filter: invert(96%) sepia(9%) saturate(1031%) hue-rotate(74deg) brightness(102%) contrast(105%);
 }
 
-.nav-links {
-  margin-right: 1em;
-  margin-top: 0.4em;
-}
-
 .nav-links > a > img {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(137deg) brightness(108%) contrast(102%);
   height: 2em;
@@ -85,7 +80,7 @@ html {
 #info-button {
   margin-left: 26.5%;
   margin-top: 4%;
-  padding: 5px 12px 5px 12px
+  padding: 5px 12px 5px 12px;
 }
 
 #custom-loc-input {
@@ -99,7 +94,7 @@ html {
   background-color: #FAFAFA;
   color: #5C5C5C;
   width: 50%;
-  padding: 1em;
+  padding: 2em;
   border: white ridge 0.5em;
   text-align: center;
 }
@@ -213,7 +208,6 @@ html {
   margin: 1.25em auto 0em auto;
 }
 
-
 #topo-def-title {
   margin: 0;
 }
@@ -225,7 +219,7 @@ html {
 #profile-deriv > img {
   height: 23em;
   border: 0.25em solid white;
-  display:block;
+  display: block;
   margin: 2em auto 2em auto;
 }
 
@@ -271,8 +265,14 @@ html {
 }
 
 #topo-map {
+  height: 200px;
+  width: auto;
   height: 12em;
   width: 32em;
+}
+
+#elevatation-data {
+  height: 200px;
 }
 
 #profile {
@@ -291,5 +291,3 @@ html {
 .data > img {
   border: lightgray;
 }
-
-
